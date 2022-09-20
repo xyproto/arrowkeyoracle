@@ -74,7 +74,7 @@ OUT:
 				shufflePush(arrowRightKey) // right
 			}
 		case escKey, qKey:
-			o.Printf("\n<red>Bye%s</red>\n", maybeExclamationMark)
+			o.Printf("\n<lightblue>Bye%s</lightblue>\n", maybeExclamationMark)
 			break OUT
 		default:
 			keyPressed = false
