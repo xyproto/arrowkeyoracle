@@ -1,6 +1,6 @@
 # Arrow Key Oracle
 
-Commandline utility for predicting left or right arrow key presses.
+Command line utility for predicting left or right arrow key presses by the user.
 
 ### Installation
 

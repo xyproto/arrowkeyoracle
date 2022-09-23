@@ -1,4 +1,4 @@
-module github.com/xyproto/predict
+module github.com/xyproto/arrowkeyoracle
 
 go 1.19
 
