@@ -8,6 +8,10 @@ With Go 1.18 or later:
 
     go install github.com/xyproto/arrowkeyoracle@latest
 
+## Inspired by
+
+* https://github.com/elsehow/aaronson-oracle
+
 ### General info
 
 * Version: 1.0.0
