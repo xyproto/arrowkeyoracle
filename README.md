@@ -1,4 +1,4 @@
-# predict
+# Arrow Key Oracle
 
 Commandline utility for predicting left or right arrow key presses.
 
@@ -6,7 +6,7 @@ Commandline utility for predicting left or right arrow key presses.
 
 With Go 1.18 or later:
 
-    go install github.com/xyproto/predict@latest
+    go install github.com/xyproto/arrowkeyoracle@latest
 
 ### General info
 
