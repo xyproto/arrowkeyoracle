@@ -14,6 +14,8 @@ const (
 	escKey        = 27
 	qKey          = 113
 	rKey          = 114
+	aKey          = 97
+	dKey          = 100
 	arrowLeftKey  = 252
 	arrowRightKey = 254
 )
@@ -27,6 +29,7 @@ func main() {
 	o.Println("<cyan>-----------------------------------------</cyan>")
 	o.Println()
 	o.Println("Try pressing left or right arrow, and see if the computer can predict your keypress.")
+	o.Println("Pressing a and d instead of left and right arrow is also possible.")
 	o.Println("Press <white>r</white> to let the computer chose a random left or right arrow keypress.")
 	o.Println()
 	o.Println("Press <white>q</white> or <white>Esc</white> to quit.")
@@ -63,9 +66,9 @@ OUT:
 	for {
 		keyPressed = true
 		switch tty.Key() {
-		case arrowLeftKey:
+		case arrowLeftKey, aKey:
 			shufflePush(arrowLeftKey) // left
-		case arrowRightKey:
+		case arrowRightKey, dKey:
 			shufflePush(arrowRightKey) // right
 		case rKey:
 			if rand.Intn(2) == 0 {
