@@ -1,11 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 
-	"github.com/xyproto/textoutput"
-	"github.com/xyproto/vt100"
+	"github.com/xyproto/vt"
 )
 
 const (
@@ -22,10 +22,10 @@ const (
 
 func main() {
 
-	o := textoutput.New()
+	o := vt.New()
 
 	o.Println("<cyan>-----------------------------------------</cyan>")
-	o.Printf("<white> %s </white>\n", versionString)
+	o.Println("<white> " + versionString + "</white>")
 	o.Println("<cyan>-----------------------------------------</cyan>")
 	o.Println()
 	o.Println("Try pressing left or right arrow, and see if the computer can predict your keypress.")
@@ -35,7 +35,7 @@ func main() {
 	o.Println("Press <white>q</white> or <white>Esc</white> to quit.")
 	o.Println()
 
-	tty, err := vt100.NewTTY()
+	tty, err := vt.NewTTY()
 	if err != nil {
 		panic(err)
 	}
@@ -77,7 +77,7 @@ OUT:
 				shufflePush(arrowRightKey) // right
 			}
 		case escKey, qKey:
-			o.Printf("\n<lightblue>Bye%s</lightblue>\n", maybeExclamationMark)
+			o.Println("\n<lightblue>Bye" + maybeExclamationMark + "</lightblue>")
 			break OUT
 		default:
 			keyPressed = false
@@ -156,7 +156,7 @@ OUT:
 			if ratio > 0.5 {
 				maybeExclamationMark = "!"
 			}
-			o.Printf("The computer is right <yellow>%.2f%%</yellow> of the time%s\n", ratio*100.0, maybeExclamationMark)
+			o.Println(fmt.Sprintf("The computer is right <yellow>%.2f%%</yellow> of the time%s", ratio*100.0, maybeExclamationMark))
 
 			// Output the current keypress and the last 4 keypresses, 5 in total
 			o.Print("Current state: ")
