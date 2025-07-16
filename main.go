@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	versionString = "Arrow Key Oracle 1.0.0"
+	versionString = "Arrow Key Oracle 1.0.1"
 
 	escKey        = 27
 	qKey          = 113

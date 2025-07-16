@@ -14,5 +14,5 @@ With Go 1.18 or later:
 
 ### General info
 
-* Version: 1.0.0
+* Version: 1.0.1
 * License: BSD-3
